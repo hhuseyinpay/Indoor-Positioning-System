@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:IndoorPositioning" x:Class="IndoorPositioning.TestPage">
+    <ContentPage.Resources>
+        <local:RssiToColorConverter x:Key="rssitocolorconverter" />
+    </ContentPage.Resources>
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="BLE1" HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="#d8d9d3" TextColor="#163fed" />
+
+            <Label Grid.Row="0" Grid.Column="1" Text="BLE2" HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="#d8d9d3" TextColor="#163fed" />
+
+            <Label Grid.Row="0" Grid.Column="2" Text="BLE3" HorizontalTextAlignment="Center"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="#d8d9d3" TextColor="#163fed" />
+
+
+            <ListView Grid.Row="1" Grid.Column="0" ItemsSource="{Binding BLE1ValueList}" HasUnevenRows="true"
+                      SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="20">
+                            <Label Text="{Binding}" TextColor="Black" FontSize="15" VerticalOptions="Center"
+                                   HorizontalTextAlignment="Center"
+                                   BackgroundColor="{Binding ., Converter={StaticResource rssitocolorconverter}}" />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView Grid.Row="1" Grid.Column="1" ItemsSource="{Binding BLE2ValueList}" HasUnevenRows="true"
+                      SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="20">
+                            <Label Text="{Binding}" TextColor="Black" FontSize="15" VerticalOptions="Center"
+                                   HorizontalTextAlignment="Center"
+                                   BackgroundColor="{Binding ., Converter={StaticResource rssitocolorconverter}}" />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView Grid.Row="1" Grid.Column="2" ItemsSource="{Binding BLE3ValueList}" HasUnevenRows="true"
+                      SelectionMode="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="20">
+                            <Label Text="{Binding}" TextColor="Black" FontSize="15" VerticalOptions="Center"
+                                   HorizontalTextAlignment="Center"
+                                   BackgroundColor="{Binding ., Converter={StaticResource rssitocolorconverter}}" />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="0" Text="Start Scan" TextColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="#163fed" Clicked="Handle_Clicked" />
+
+        </Grid>
+    </StackLayout>
+</ContentPage>

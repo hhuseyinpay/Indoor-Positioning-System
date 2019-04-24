@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IndoorPositioning.MapPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="AnimatingDotsStyle" TargetType="Frame">
+                <Setter Property="Padding" Value="5" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="CornerRadius" Value="6" />
+                <Setter Property="HasShadow" Value="False" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HeightRequest" Value="4" />
+                <Setter Property="WidthRequest" Value="4" />
+            </Style>
+
+            <Style
+                x:Key="BackgroundDotsStyle"
+                BasedOn="{StaticResource AnimatingDotsStyle}"
+                TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="DimGray" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+        <Grid x:Name="MainGrid">
+            <Image Grid.Row="0" Source="map.png" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
