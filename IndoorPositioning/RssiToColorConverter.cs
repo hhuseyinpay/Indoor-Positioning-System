@@ -8,19 +8,19 @@ namespace IndoorPositioning
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (!(value is string)) return Color.WhiteSmoke;
+            if (value == null) return Color.WhiteSmoke;
             var rssi = System.Convert.ToInt32(value);
-            if (rssi > -75)
+            if (rssi > -65)
             {
                 return Color.Green;
             }
 
-            if (rssi <= -75 && rssi >= -90)
+            if (rssi <= -65 && rssi >= -85)
             {
                 return Color.Gold;
             }
 
-            if (rssi < -90)
+            if (rssi < -85)
             {
                 return Color.Red;
             }

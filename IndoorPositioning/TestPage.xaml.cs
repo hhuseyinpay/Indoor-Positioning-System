@@ -57,6 +57,7 @@ namespace IndoorPositioning
         async void Handle_Clicked(object sender, System.EventArgs e)
         {
             //CrossBleAdapter.Current.ScanInterval(TimeSpan.FromMilliseconds(1000) , TimeSpan.FromMilliseconds(500))
+            /*
             CrossBleAdapter.Current.Scan().Subscribe(scanResult =>
             {
                 Debug.Write(scanResult.Device.Name + " ->");
@@ -75,6 +76,7 @@ namespace IndoorPositioning
                         break;
                 }
             });
+            */
         }
     }
 }
