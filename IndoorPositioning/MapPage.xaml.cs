@@ -68,7 +68,7 @@ namespace IndoorPositioning
         {
             base.OnAppearing();
 
-            ConfigureBluetooth();
+            //ConfigureBluetooth();
             InitAsync();
 
             Device.BeginInvokeOnMainThread( () => {  _algorithm.Run(); });
