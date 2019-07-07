@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:IndoorPositioning.Windows"
         xmlns:wpf="clr-namespace:Xamarin.Forms.Platform.WPF;assembly=Xamarin.Forms.Platform.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Indoor Positioning - Server" Height="450" Width="800">
     <Grid>
         
     </Grid>
