@@ -1,6 +1,5 @@
-2018-2019 döneminde DEU Bilgisayar Mühendisliğinde ki bitirme pojemizin mobil-server uygulamasının kaynak kodları.
+2018-2019 döneminde DEU Bilgisayar Mühendisliğinde @Erylmzlm ile yapmış olduğumuz bitirme projesinin mobil-server uygulamalarının kaynak kodları.
 
-Secreen:
-
-![Test Page](testpage.jpeg)
-![Map Page](mappage.jpeg)
+Test Page           |  Map Page
+:-------------------------:|:-------------------------:
+<img src="testpage.jpeg" width="250"> | <img src="mappage.jpeg" width="250">
